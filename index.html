@@ -226,6 +226,17 @@
     .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   }
 
+
+  /* FLOW */
+  .flow-list{display:flex;flex-direction:column;gap:0;}
+  .flow-item{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:0.5px solid var(--bd);}
+  .flow-item:first-child{border-top:0.5px solid var(--bd);}
+  .flow-num{font-family:var(--en);font-size:22px;font-weight:300;color:var(--amber);letter-spacing:0.05em;flex-shrink:0;width:32px;line-height:1.2;}
+  .flow-body{}
+  .flow-title{font-family:var(--jp);font-size:14px;font-weight:500;color:var(--navy);letter-spacing:0.04em;margin-bottom:5px;}
+  .flow-desc{font-family:var(--jp);font-size:12px;color:var(--ink-mid);line-height:1.9;letter-spacing:0.03em;}
+  .flow-badge{display:inline-block;font-family:var(--jp);font-size:10px;color:var(--amber);border:0.5px solid var(--amber-bd);padding:2px 8px;border-radius:1px;background:var(--amber-pale);letter-spacing:0.06em;margin-top:6px;}
+
 </style>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
@@ -361,8 +372,24 @@
       <button class="video-tab" onclick="switchVideo(1,3)">Livina様</button>
     </div>
     <div class="video-panel active"><div class="video-meta"><span class="video-meta-badge">撮影／制作</span><span class="video-meta-badge">鹿児島</span></div><div style="position:relative;border-radius:2px;overflow:hidden;aspect-ratio:9/16;max-width:320px;margin:0 auto;background:#111;margin-bottom:8px;"><img src="https://img.youtube.com/vi/Vb1yPDLfUrU/maxresdefault.jpg" alt="動画サムネイル" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.75;"><a href="https://www.youtube.com/shorts/Vb1yPDLfUrU" target="_blank" rel="noopener" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;"><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,0,0,0.85);display:flex;align-items:center;justify-content:center;"><i class="ti ti-player-play" style="color:#fff;font-size:20px;margin-left:3px;"></i></div><span style="font-family:var(--jp);font-size:11px;color:#fff;letter-spacing:0.08em;background:rgba(0,0,0,0.5);padding:4px 12px;border-radius:1px;">YouTubeで見る</span></a></div><p class="video-caption">株式会社リンク様 — 採用動画 <a href="https://link-mk.com/recruit/top" target="_blank" rel="noopener" style="font-family:var(--jp);font-size:10px;color:#c9a050;border:0.5px solid rgba(201,160,80,0.4);padding:2px 8px;border-radius:1px;margin-left:8px;text-decoration:none;">採用サイトを見る →</a></p></div>
-    <div class="video-panel"><div class="video-meta"><span class="video-meta-badge">制作</span></div><div class="video-wrap"><iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TmYYyeEADqA" allowfullscreen loading="lazy"></iframe></div><p class="video-caption">整体院いそはし様 — LINE配信用動画 ①</p></div>
-    <div class="video-panel"><div class="video-meta"><span class="video-meta-badge">制作</span></div><div class="video-wrap"><iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dOoxS3iRTg0" allowfullscreen loading="lazy"></iframe></div><p class="video-caption">整体院いそはし様 — LINE配信用動画 ②</p></div>
+    <div class="video-panel"><div class="video-meta"><span class="video-meta-badge">制作</span></div><div style="position:relative;border-radius:2px;overflow:hidden;aspect-ratio:16/9;background:#000;margin-bottom:8px;">
+      <img src="https://img.youtube.com/vi/TmYYyeEADqA/maxresdefault.jpg" alt="動画実績" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.85;">
+      <a href="https://www.youtube.com/watch?v=TmYYyeEADqA" target="_blank" rel="noopener" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;">
+        <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,0,0,0.88);display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-player-play" style="color:#fff;font-size:20px;margin-left:3px;"></i>
+        </div>
+        <span style="font-family:var(--jp);font-size:11px;color:#fff;letter-spacing:0.08em;background:rgba(0,0,0,0.55);padding:4px 12px;border-radius:1px;">YouTubeで見る</span>
+      </a>
+    </div><p class="video-caption">整体院いそはし様 — LINE配信用動画 ①</p></div>
+    <div class="video-panel"><div class="video-meta"><span class="video-meta-badge">制作</span></div><div style="position:relative;border-radius:2px;overflow:hidden;aspect-ratio:16/9;background:#000;margin-bottom:8px;">
+      <img src="https://img.youtube.com/vi/dOoxS3iRTg0/maxresdefault.jpg" alt="動画実績" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.85;">
+      <a href="https://www.youtube.com/watch?v=dOoxS3iRTg0" target="_blank" rel="noopener" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;">
+        <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,0,0,0.88);display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-player-play" style="color:#fff;font-size:20px;margin-left:3px;"></i>
+        </div>
+        <span style="font-family:var(--jp);font-size:11px;color:#fff;letter-spacing:0.08em;background:rgba(0,0,0,0.55);padding:4px 12px;border-radius:1px;">YouTubeで見る</span>
+      </a>
+    </div><p class="video-caption">整体院いそはし様 — LINE配信用動画 ②</p></div>
     <div class="video-panel"><div class="video-meta"><span class="video-meta-badge">撮影／制作</span><span class="video-meta-badge">大分</span></div><div style="position:relative;border-radius:2px;overflow:hidden;aspect-ratio:16/9;background:#111;margin-bottom:8px;"><img src="https://img.youtube.com/vi/mBAjdySC-Tc/maxresdefault.jpg" alt="動画サムネイル" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.75;"><a href="https://www.youtube.com/watch?v=mBAjdySC-Tc" target="_blank" rel="noopener" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;"><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,0,0,0.85);display:flex;align-items:center;justify-content:center;"><i class="ti ti-player-play" style="color:#fff;font-size:20px;margin-left:3px;"></i></div><span style="font-family:var(--jp);font-size:11px;color:#fff;letter-spacing:0.08em;background:rgba(0,0,0,0.5);padding:4px 12px;border-radius:1px;">YouTubeで見る</span></a></div><p class="video-caption">女性自立支援団体 Livina様</p></div>
   </div>
   <!-- 小田桐あさぎ様 -->
@@ -601,6 +628,69 @@
   </div>
 </section>
 
+
+
+<!-- FLOW -->
+<section class="sec" id="flow">
+  <p class="sec-eye">Flow</p>
+  <h2 class="sec-title">納品までの<em>流れ。</em></h2>
+  <div class="rule"></div>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">01</div>
+      <div class="flow-body">
+        <div class="flow-title">お問い合わせ・無料相談</div>
+        <div class="flow-desc">LINEまたはInstagramのDMからお気軽にご連絡ください。「こんなことできる？」から大歓迎です。</div>
+        <span class="flow-badge">無料</span>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">02</div>
+      <div class="flow-body">
+        <div class="flow-title">ヒアリング・お見積もり</div>
+        <div class="flow-desc">目的・ターゲット・雰囲気・納期・ご予算をヒアリング。内容をもとにお見積もりをご提示します。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">03</div>
+      <div class="flow-body">
+        <div class="flow-title">ご契約・着手金お支払い</div>
+        <div class="flow-desc">内容にご合意いただいた後、ご契約。着手金（総額の50%）をお支払いいただいて制作をスタートします。</div>
+        <span class="flow-badge">着手金 50%</span>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">04</div>
+      <div class="flow-body">
+        <div class="flow-title">撮影 / 素材収集</div>
+        <div class="flow-desc">撮影日程を調整して撮影を行います。編集のみの場合はクライアント様から素材をご提供いただきます。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">05</div>
+      <div class="flow-body">
+        <div class="flow-title">編集・制作</div>
+        <div class="flow-desc">撮影データをもとに編集・レタッチを行います。カラーグレーディングまでこだわって仕上げます。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">06</div>
+      <div class="flow-body">
+        <div class="flow-title">初稿確認・修正</div>
+        <div class="flow-desc">納品前にご確認いただきます。修正は2〜3回まで対応。フィードバックをもとに丁寧に調整します。</div>
+        <span class="flow-badge">修正 2〜3回</span>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">07</div>
+      <div class="flow-body">
+        <div class="flow-title">残金お支払い・最終納品</div>
+        <div class="flow-desc">残りの50%をお支払いいただいた後、Google DriveまたはWeTransferにてデータを納品します。</div>
+        <span class="flow-badge">残金 50% → 納品</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- CUSTOMER VOICE -->
 <section class="sec sec-alt" id="voice">
