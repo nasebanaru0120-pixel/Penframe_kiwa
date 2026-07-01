@@ -1453,12 +1453,7 @@
   <div class="rule"></div>
   <div class="ig-widget-wrap">
     <behold-widget feed-id="aJo2BbY7fwFDeRuezA9J"></behold-widget>
-    <script>
-      (() => {
-        const d=document,s=d.createElement("script");s.type="module";
-        s.src="https://w.behold.so/widget.js";d.head.append(s);
-      })();
-    </script>
+    
   </div>
   <div class="ig-row">
     <span class="ig-handle"><em>@kiwa_penframe</em></span>
@@ -1516,39 +1511,7 @@
   <div class="footer-copy">© 2026 Penframe. All rights reserved.</div>
 </footer>
 
-<script>
-  // カテゴリー切替
-  function switchCat(idx) {
-    document.querySelectorAll('.cat-tab').forEach((t,i) => t.classList.toggle('active', i===idx));
-    document.querySelectorAll('.cat-panel').forEach((p,i) => {
-      p.classList.toggle('active', i===idx);
-      if(i!==idx) stopVideos(p);
-    });
-  }
 
-  // 動画タブ切替
-  function switchVideo(catIdx, vidIdx) {
-    const cat = document.getElementById('cat-'+catIdx);
-    cat.querySelectorAll('.video-tab').forEach((t,i) => t.classList.toggle('active', i===vidIdx));
-    cat.querySelectorAll('.video-panel').forEach((p,i) => {
-      if(i!==vidIdx) stopVideos(p);
-      p.classList.toggle('active', i===vidIdx);
-    });
-  }
-
-  // タブ切替時に動画を止める
-  function stopVideos(container) {
-    container.querySelectorAll('iframe').forEach(f => {
-      const s = f.src; f.src=''; f.src=s;
-    });
-  }
-
-  // デスクトップナビ
-  const dNav = document.querySelector('.nav-desktop');
-  function checkWidth(){ dNav.style.display = window.innerWidth >= 768 ? 'flex' : 'none'; }
-  checkWidth();
-  window.addEventListener('resize', checkWidth);
-</script>
 
 <!-- PHOTO MODAL -->
 <div class="photo-modal" id="photoModal">
@@ -1559,44 +1522,6 @@
   <div class="photo-modal-caption" id="modalCaption"></div>
 </div>
 
-<script>
-  // Photo modal
-  const photoItems = [];
-  document.querySelectorAll('.photo-scroll-item img').forEach((img, i) => {
-    photoItems.push({ src: img.src, cap: [{"cap": "大分市まちなかイベント — スタッフ集合"}, {"cap": "大分市歩行者天国 — はいはいレース"}, {"cap": "Best of Miss Oita 2026"}, {"cap": "Best of Miss Oita 2026"}, {"cap": "宣材写真 — 首高ふみ様"}, {"cap": "宣材写真 — KASUMI様"}, {"cap": "宣材写真 — KASUMI様"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}][i] ? [{"cap": "大分市まちなかイベント — スタッフ集合"}, {"cap": "大分市歩行者天国 — はいはいレース"}, {"cap": "Best of Miss Oita 2026"}, {"cap": "Best of Miss Oita 2026"}, {"cap": "宣材写真 — 首高ふみ様"}, {"cap": "宣材写真 — KASUMI様"}, {"cap": "宣材写真 — KASUMI様"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}, {"cap": "婚活ポートレート"}][i].cap : '' });
-  });
-  photoItems.forEach((p,i) => { p.src = p.src; p.caption = p.cap || ''; });
-  let currentPhoto = 0;
-  function openModal(idx) {
-    currentPhoto = idx;
-    document.getElementById('modalImg').src = photoItems[idx].src;
-    document.getElementById('modalCaption').textContent = photoItems[idx].cap || photoItems[idx].caption || '';
-    document.getElementById('photoModal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal() {
-    document.getElementById('photoModal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function modalNav(dir) {
-    currentPhoto = (currentPhoto + dir + photoItems.length) % photoItems.length;
-    document.getElementById('modalImg').src = photoItems[currentPhoto].src;
-    document.getElementById('modalCaption').textContent = photoItems[currentPhoto].cap || photoItems[currentPhoto].caption || '';
-  }
-  document.getElementById('photoModal').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowLeft') modalNav(-1);
-    if (e.key === 'ArrowRight') modalNav(1);
-  });
 
-  function switchVoice(idx) {
-    document.querySelectorAll('.voice-tab').forEach((t,i) => t.classList.toggle('active', i===idx));
-    document.querySelectorAll('.voice-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
-  }
-
-</script>
 </body>
 </html>
